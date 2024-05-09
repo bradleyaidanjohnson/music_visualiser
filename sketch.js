@@ -9,12 +9,10 @@ var fourier;
 
 function preload() {
   sound = loadSound("assets/stomper_reggae_bit.mp3");
-  // sound = loadSound("http://localhost:8000/assets/stomper_reggae_bit.mp3");
-  console.log("loaded");
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight - 4);
   background(0);
   controls = new ControlsAndInput();
 

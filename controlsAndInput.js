@@ -9,11 +9,12 @@ function ControlsAndInput() {
   //make the window fullscreen or revert to windowed
   //check if the playback button has been clicked
   this.mousePressed = function () {
-    if (!this.playbackButton.hitCheck()) {
+    if (this.playbackButton.hitCheck()) {
       this.draw();
     } else {
       //if not make the visualisation fullscreen
-      fullscreen();
+      let fs = fullscreen();
+      fullscreen(!fs);
     }
   };
 
